@@ -19,6 +19,23 @@ public class Trip {
     private String numberOfBedsAdults;
     private String getNumberOfBedsChildren;
 
+    public Trip() {
+    }
+
+    public Trip(String departureDate, String returnDate, String numberOfDays, String type,
+                Integer adultPrice, Integer childPrice, String promoted,
+                String numberOfBedsAdults, String getNumberOfBedsChildren) {
+        this.departureDate = departureDate;
+        this.returnDate = returnDate;
+        this.numberOfDays = numberOfDays;
+        this.type = type;
+        this.adultPrice = adultPrice;
+        this.childPrice = childPrice;
+        this.promoted = promoted;
+        this.numberOfBedsAdults = numberOfBedsAdults;
+        this.getNumberOfBedsChildren = getNumberOfBedsChildren;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getIsoCode() {

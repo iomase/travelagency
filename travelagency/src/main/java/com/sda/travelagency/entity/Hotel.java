@@ -13,6 +13,15 @@ public class Hotel {
     private String rating;
     private String description;
 
+    public Hotel() {
+    }
+
+    public Hotel(String name, String rating, String description) {
+        this.name = name;
+        this.rating = rating;
+        this.description = description;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getIsoCode() {

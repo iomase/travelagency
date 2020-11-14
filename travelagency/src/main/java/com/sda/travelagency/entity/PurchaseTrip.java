@@ -13,6 +13,15 @@ public class PurchaseTrip {
     private String tripDetails;
     private Integer amount;
 
+    public PurchaseTrip() {
+    }
+
+    public PurchaseTrip(String trip, String tripDetails, Integer amount) {
+        this.trip = trip;
+        this.tripDetails = tripDetails;
+        this.amount = amount;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getIsoCode() {
