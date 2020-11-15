@@ -10,15 +10,15 @@ public class PurchaseTrip {
 
     private Long isoCode;
     private String trip;
-    private String tripDetails;
+    private String clientDetails;
     private Integer amount;
 
     public PurchaseTrip() {
     }
 
-    public PurchaseTrip(String trip, String tripDetails, Integer amount) {
+    public PurchaseTrip(String trip, String clientDetails, Integer amount) {
         this.trip = trip;
-        this.tripDetails = tripDetails;
+        this.clientDetails = clientDetails;
         this.amount = amount;
     }
 
@@ -41,11 +41,11 @@ public class PurchaseTrip {
     }
 
     public String getTripDetails() {
-        return tripDetails;
+        return clientDetails;
     }
 
     public void setTripDetails(String tripDetails) {
-        this.tripDetails = tripDetails;
+        this.clientDetails = tripDetails;
     }
 
     public Integer getAmount() {
