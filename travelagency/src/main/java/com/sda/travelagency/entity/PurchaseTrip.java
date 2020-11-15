@@ -40,12 +40,12 @@ public class PurchaseTrip {
         this.trip = trip;
     }
 
-    public String getTripDetails() {
+    public String getClientDetails() {
         return clientDetails;
     }
 
-    public void setTripDetails(String tripDetails) {
-        this.clientDetails = tripDetails;
+    public void setClientDetails(String clientDetails) {
+        this.clientDetails = clientDetails;
     }
 
     public Integer getAmount() {
