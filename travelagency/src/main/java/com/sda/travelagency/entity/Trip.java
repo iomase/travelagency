@@ -1,9 +1,6 @@
 package com.sda.travelagency.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Trip {
@@ -18,6 +15,18 @@ public class Trip {
     private String promoted;
     private String numberOfBedsAdults;
     private String getNumberOfBedsChildren;
+
+    @ManyToOne
+    private City fromCity;
+    @ManyToOne
+    private Airport fromAirport;
+    @ManyToOne
+    private City toCity;
+    @ManyToOne
+    private Hotel toHotel;
+    @ManyToOne
+    private Airport toAirport;
+
 
     public Trip() {
     }
