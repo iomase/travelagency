@@ -14,6 +14,7 @@ public class Hotel {
     private String description;
 
     public Hotel() {
+
     }
 
     public Hotel(String name, String rating, String description) {
