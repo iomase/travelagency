@@ -4,10 +4,12 @@ import com.sda.travelagency.dto.HotelDTO;
 import com.sda.travelagency.entity.Hotel;
 import com.sda.travelagency.repository.HotelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class HotelService {
 
     @Autowired

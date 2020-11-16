@@ -1,6 +1,5 @@
 package com.sda.travelagency.service;
 
-
 import com.sda.travelagency.dto.AirportDTO;
 import com.sda.travelagency.entity.Airport;
 import com.sda.travelagency.repository.AirportRepository;
@@ -12,6 +11,7 @@ import java.util.List;
 
 @Service
 public class AirportService {
+
    @Autowired
    private AirportRepository airportRepository;
 
