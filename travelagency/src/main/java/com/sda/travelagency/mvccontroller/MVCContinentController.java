@@ -13,18 +13,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class MVCContinentController {
 
     @GetMapping("/viewContinent")
-    public String viewContinent(){
+    public String viewContinent() {
         return "continent-list";
     }
 
     @GetMapping("viewAddContinent")
-    public String viewAddContinentPage(Model model){
-        model.addAttribute("continent",new ContinentDTO());
+    public String viewAddContinentPage(Model model) {
+        model.addAttribute("continent", new ContinentDTO());
         return "view-add-continent";
     }
+
     @PostMapping("addAirport")
-    public String addContinent(@ModelAttribute ContinentDTO continentDTO){
+    public String addContinent(@ModelAttribute ContinentDTO continentDTO) {
         addContinent(continentDTO);
-        return "redirect:continent-List";
+        return "redirect:continent-list";
     }
+
 }

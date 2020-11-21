@@ -10,18 +10,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class MVCAirportController {
+
     @GetMapping("/viewAirports")
-    public String viewAirports(){
+    public String viewAirports() {
         return "airports-list";
     }
+
     @GetMapping("viewAddAirport")
-    public String viewAddAirportPage(Model model){
-        model.addAttribute("airport",new AirportDTO());
+    public String viewAddAirportPage(Model model) {
+        model.addAttribute("airport", new AirportDTO());
         return "view-add-airport";
     }
+
     @PostMapping("addAirport")
-    public String addAirport(@ModelAttribute AirportDTO airportDTO){
-       addAirport(airportDTO);
-        return "redirect:airports-List";
+    public String addAirport(@ModelAttribute AirportDTO airportDTO) {
+        addAirport(airportDTO);
+        return "redirect:airports-list";
     }
+
 }

@@ -13,20 +13,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class MVCCountryController {
 
     @GetMapping("/viewCountry")
-    public String viewCountry(){
+    public String viewCountry() {
         return "country-list";
     }
 
     @GetMapping("viewAddCountry")
-    public String viewAddCountryPage(Model model){
-        model.addAttribute("country",new CountryDTO());
+    public String viewAddCountryPage(Model model) {
+        model.addAttribute("country", new CountryDTO());
         return "view-add-country";
     }
-    @PostMapping("addCountry")
-    public String addCountry(@ModelAttribute CountryDTO countryDTO){
-        addCountry(countryDTO);
-        return "redirect:country-List";
-    }
 
+    @PostMapping("addCountry")
+    public String addCountry(@ModelAttribute CountryDTO countryDTO) {
+        addCountry(countryDTO);
+        return "redirect:country-list";
+    }
 
 }

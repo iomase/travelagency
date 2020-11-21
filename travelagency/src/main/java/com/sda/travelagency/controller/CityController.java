@@ -20,12 +20,13 @@ public class CityController {
     private CityService cityService;
 
     @PostMapping("/api/addCity")
-    public ResponseEntity addCity (@RequestBody CityDTO cityDTO){
-     cityService.addCity(cityDTO);
-     return ResponseEntity.ok(HttpStatus.OK);
+    public ResponseEntity addCity(@RequestBody CityDTO cityDTO) {
+        cityService.addCity(cityDTO);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
+
     @GetMapping("/api/getAllCities")
-    public ResponseEntity getAllCities(){
+    public ResponseEntity getAllCities() {
         List<CityDTO> cityDTOList = cityService.getCitys();
         return ResponseEntity.ok(cityDTOList);
     }

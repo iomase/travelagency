@@ -13,19 +13,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class MVCCityController {
 
     @GetMapping("/viewCities")
-    public String viewCities(){
+    public String viewCities() {
         return "cities-list";
     }
 
     @GetMapping("viewAddCity")
-    public String viewAddCityPage(Model model){
-        model.addAttribute("city",new CityDTO());
+    public String viewAddCityPage(Model model) {
+        model.addAttribute("city", new CityDTO());
         return "view-add-city";
     }
+
     @PostMapping("addCity")
-    public String addCity(@ModelAttribute CityDTO cityDTO){
+    public String addCity(@ModelAttribute CityDTO cityDTO) {
         addCity(cityDTO);
-        return "redirect:cities-List";
+        return "redirect:cities-list";
     }
 
 }

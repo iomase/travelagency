@@ -20,17 +20,15 @@ public class AirportController {
     private AirportService airportService;
 
     @PostMapping("/api/addAirport")
-    public ResponseEntity addAirport (@RequestBody AirportDTO airportDTO){
+    public ResponseEntity addAirport(@RequestBody AirportDTO airportDTO) {
         airportService.addAirport(airportDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
     @GetMapping("/api/getAllAirports")
-    public ResponseEntity getAllAirports(){
-        List<AirportDTO> airpotDTOList = airportService.getAirports();
-        return ResponseEntity.ok(airpotDTOList);
+    public ResponseEntity getAllAirports() {
+        List<AirportDTO> airportDTOList = airportService.getAirports();
+        return ResponseEntity.ok(airportDTOList);
     }
-
-
-
 
 }

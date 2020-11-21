@@ -20,17 +20,16 @@ public class CountryController {
     private CountryService countryService;
 
     @PostMapping("/api/addCountry")
-    public ResponseEntity addCountry (@RequestBody CountryDTO countryDTO){
+    public ResponseEntity addCountry(@RequestBody CountryDTO countryDTO) {
         countryService.addCountry(countryDTO);
         return ResponseEntity.ok(HttpStatus.OK);
     }
+
     @GetMapping("/api/getAllCountries")
-    public ResponseEntity getAllCities(){
+    public ResponseEntity getAllCities() {
         List<CountryDTO> countryDTOList = countryService.getCountries();
         return ResponseEntity.ok(countryDTOList);
     }
-
-
 
 
 }
