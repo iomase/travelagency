@@ -23,7 +23,7 @@ public class MVCContinentController {
         return "view-add-continent";
     }
 
-    @PostMapping("addAirport")
+    @PostMapping("addContinent")
     public String addContinent(@ModelAttribute ContinentDTO continentDTO) {
         addContinent(continentDTO);
         return "redirect:continent-list";
