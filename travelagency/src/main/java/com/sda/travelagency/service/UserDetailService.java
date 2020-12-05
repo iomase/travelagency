@@ -1,4 +1,4 @@
-package com.sda.travelagency.security;
+package com.sda.travelagency.service;
 
 import com.sda.travelagency.dto.UserDTO;
 import com.sda.travelagency.entity.UserModel;
