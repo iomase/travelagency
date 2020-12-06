@@ -1,11 +1,8 @@
 package com.sda.travelagency.entity;
 
-import com.sda.travelagency.dto.UserDTO;
-import org.springframework.data.annotation.Id;
-import org.springframework.ui.Model;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class UserModel {
@@ -16,18 +13,8 @@ public class UserModel {
     private String password;
     private String email;
     private String role;
-    @javax.persistence.Id
-    private String id;
 
     public UserModel() {
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getUsername() {
@@ -54,6 +41,5 @@ public class UserModel {
     public String getRole() {
         return role;
     }
-
 
 }

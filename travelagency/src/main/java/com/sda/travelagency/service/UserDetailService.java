@@ -27,10 +27,11 @@ public class UserDetailService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<UserModel> userCredentialModelOptional = com.sda.travelagency.repository.UserRepository.findById(username);
+        Optional<UserModel> userCredentialModelOptional = userRepository.findById(username);
         if (!userCredentialModelOptional.isPresent()) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }
+
         UserModel userCredentialModel = userCredentialModelOptional.get();
         String userName = userCredentialModel.getUsername();
         String password = userCredentialModel.getPassword();

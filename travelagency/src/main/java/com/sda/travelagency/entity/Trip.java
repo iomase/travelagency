@@ -16,16 +16,16 @@ public class Trip {
     private String numberOfBedsAdults;
     private String getNumberOfBedsChildren;
 
- //   @ManyToOne
-//    private City fromCity;
-//    @ManyToOne
-//    private Airport fromAirport;
-//    @ManyToOne
-//    private City toCity;
-//    @ManyToOne
-//    private Hotel toHotel;
-//    @ManyToOne
-//    private Airport toAirport;
+    @ManyToOne
+    private City fromCity;
+    @ManyToOne
+    private Airport fromAirport;
+    @ManyToOne
+    private City toCity;
+    @ManyToOne
+    private Hotel toHotel;
+    @ManyToOne
+    private Airport toAirport;
 
 
     public Trip() {

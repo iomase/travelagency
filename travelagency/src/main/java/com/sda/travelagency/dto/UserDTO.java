@@ -7,11 +7,8 @@ public class UserDTO {
     private String password;
     private String role;
 
-    public UserDTO(Long isoCode, String userName, String password, String role) {
-        this.isoCode = isoCode;
-        this.userName = userName;
-        this.password = password;
-        this.role = role;
+
+    public UserDTO() {
     }
 
 
@@ -46,4 +43,13 @@ public class UserDTO {
     public void setRole(String role) {
         this.role = role;
     }
+
+
+    public UserDTO(Long isoCode, String userName, String password, String role) {
+        this.isoCode = isoCode;
+        this.userName = userName;
+        this.password = password;
+        this.role = role;
+    }
+
 }
